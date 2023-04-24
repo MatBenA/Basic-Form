@@ -5,6 +5,7 @@
 
 body {
     display: flex;
+    font-family: 'Nunito', sans-serif;
 }
 
 aside{
@@ -29,4 +30,19 @@ aside div:only-child{
 main{
     max-width: 65%;
     height: 100vh;
+}
+
+section:first-child {
+    height: 35vh;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    flex-direction: column;
+    padding: 40px 30px;
+}
+
+section:first-child p {
+    font-size: 21px;
+    font-weight: 700;
+    width: 650px;
 }
