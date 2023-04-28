@@ -6,6 +6,8 @@
 body {
     display: flex;
     font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 aside{
@@ -18,7 +20,7 @@ aside{
     align-items: center;
 }
 
-aside div:only-child{
+aside div{
     height: 200px;
     width: 100%;
     background-color: hsla(0, 0%, 0%, 0.541);
@@ -28,7 +30,7 @@ aside div:only-child{
 }
 
 main{
-    max-width: 65%;
+    /* width: 65%; */
     height: 100vh;
 }
 
@@ -45,4 +47,74 @@ section:first-child p {
     font-size: 21px;
     font-weight: 700;
     width: 650px;
+}
+
+form{
+    box-shadow: 0px 2px 3px 1px grey;
+    width: 100%;
+    padding: 1rem 0 1px 1rem;
+}
+
+form>div{
+    display:flex;
+    gap: 1rem;
+    margin: 1rem 0px;
+}
+
+form>div>div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+form input{
+    appearance: none;
+    border-radius: 5px;
+    height: 1.6rem;
+    border: 1px solid rgb(207, 207, 207);
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+input:hover{
+    background-color: rgb(248, 248, 248);
+}
+
+input:invalid{
+    border-color: rgb(255, 110, 110);
+}
+
+input:focus, input:focus-visible{
+    border: 1px solid blue;
+}
+
+button{
+    padding: 0.6rem 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    
+    border-radius: 8px;
+    border: 0px;
+    
+    box-shadow: 1px 1px 5px rgb(87, 33, 23);
+
+    color: white;
+    background-color: rgb(187, 70, 50);
+
+    margin: 1rem;
+}
+
+button:hover{
+    background-color: rgb(243, 70, 39);
+}
+button:active{
+    background-color: rgb(187, 70, 50);
+}
+
+a:link{
+    color: rgb(187, 70, 50);
+}
+a:visited{
+    color: rgb(128, 49, 35);
 }
