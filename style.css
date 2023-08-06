@@ -4,7 +4,8 @@
 }
 
 :root{
-    --sdbrwidth: 400px
+    --sdbrwidth: 400px;
+    --leftspace: 40px;
 }
 
 body {
@@ -40,6 +41,7 @@ main{
 section:first-child {
     display: flex;
     flex-direction: column;
+    margin-left: var(--leftspace);
 }
 
 section:first-child p {
@@ -51,11 +53,12 @@ section:first-child p {
 form{
     box-shadow: 0px 1px 5px rgb(158, 158, 158);
     max-width: 100%;
+    padding-left: var(--leftspace);;
 }
 
 form>div{
     display:flex;
-    gap: 1rem;
+    gap: var(--leftspace);
     margin: 1rem 0px;
 }
 
@@ -84,6 +87,10 @@ input:invalid{
 
 input:focus, input:focus-visible{
     border: 1px solid blue;
+}
+
+.bottom {
+    margin-left: var(--leftspace);
 }
 
 button{
