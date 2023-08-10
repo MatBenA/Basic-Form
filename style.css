@@ -6,6 +6,7 @@
 :root{
     --sdbrwidth: 400px;
     --space: 40px;
+    --focus-color: rgb(0, 166, 255);
 }
 
 body {
@@ -56,36 +57,49 @@ form{
     padding: 20px var(--space);;
 }
 
-form>div{
-    display:flex;
-    gap: var(--space);
-    margin: 1rem 0px;
+form > div{
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-form>div>div {
+.input-wrapper{
     display: flex;
     flex-direction: column;
-    width: 40%;
 }
 
 form input{
-    appearance: none;
-    border-radius: 5px;
+    font-family:inherit;
+    font-size: 100%;
+    width: 200px;
     height: 1.6rem;
-    border: 1px solid rgb(207, 207, 207);
-    font-family: 'Nunito', sans-serif;
+    border-radius: 5px;
+    border: 1px solid grey;
+    transition: all 0.3s;
 }
 
-input:hover{
-    background-color: rgb(248, 248, 248);
+
+
+form input:hover{
+    background-color: rgb(245, 245, 245);
+    transition: 0s;
 }
 
-input:invalid{
-    border-color: rgb(255, 110, 110);
+form input:valid{
+    border-color: rgb(44, 219, 44);
 }
 
-input:focus, input:focus-visible{
-    border: 1px solid blue;
+form input:invalid{
+    border-color: rgb(255, 61, 61);
+}
+
+form input:focus,
+form input:focus-visible{
+    transition: all 0.3s;
+    outline: none;
+    border-color: var(--focus-color);
+    box-shadow: 0 0 3px var(--focus-color);
 }
 
 .bottom {
@@ -102,11 +116,11 @@ button{
     border-radius: 8px;
     border: 0px;
     
-    box-shadow: 1px 1px 5px rgb(87, 33, 23);
+    box-shadow: 0 0 5px rgb(87, 33, 23);
 
     color: white;
     background-color: rgb(187, 70, 50);
-
+    transition: all .2s;
 }
 
 button:hover{
